@@ -13,11 +13,21 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Title'),
+          title: Center(child: Text('Title')),
           backgroundColor: Colors.red,
+          leading: Image(image: NetworkImage('https://mclarencollege.in/images/icon.png')),
         ),
         backgroundColor: Colors.red.shade100,
-        body: Center(child: image)
+        body: Center(child: image),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            // Add your onPressed code here!
+          },
+          label: Text('Nice'),
+          icon: Icon(Icons.thumb_up),
+          backgroundColor: Colors.pink,
+
+        ),
       ),
     ),
   );
